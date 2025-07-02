@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: uber-eats-backend
+    env: python
+    buildCommand: "pip install -r ubereats-recommendation-system/requirements.txt"
+    startCommand: "gunicorn api.app:app"
+    rootDir: ubereats-recommendation-system
+    plan: free
+
+  - type: web
+    name: uber-eats-frontend
+    env: static
+    buildCommand: "npm install && npm run build"
+    staticPublishPath: ubereats-frontend/build
+    rootDir: ubereats-frontend
+    plan: free
