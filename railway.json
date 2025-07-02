@@ -2,7 +2,7 @@
   "services": [
     {
       "name": "ubereats-backend",
-      "rootDir": "restaurant-recommendation-",
+      "rootDir": "restaurant-recommendation-system",
       "installCommand": "pip install -r requirements.txt",
       "startCommand": "gunicorn api.app:app",
       "port": 5000
