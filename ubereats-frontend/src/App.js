@@ -10,7 +10,7 @@ function App() {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await axios.post('https://YOUR-RENDER-URL/recommend', {
+      const response = await axios.post('https://recommendation-model-3.onrender.com', {
         user_id: parseInt(userId),
         num_recommendations: 5
       });
