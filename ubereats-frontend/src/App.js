@@ -10,7 +10,8 @@ function App() {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await axios.post('https://YOUR-RENDER-URL/recommend', {
+      const response = await axios.post('https://uber-eats-backend.onrender.com/recommend', {
+', {
         user_id: parseInt(userId),
         num_recommendations: 5
       });
